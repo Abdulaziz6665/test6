@@ -8,7 +8,7 @@ const ListTodos = () => {
 
   async function deleteTodo(id) {
     try {
-      const res = await fetch(`/todos/${id}`, {
+      await fetch(`/todos/${id}`, {
         method: "DELETE",
       });
 
@@ -35,7 +35,7 @@ const ListTodos = () => {
   return (
     <Fragment>
       {" "}
-      <table class="table mt-5">
+      <table className="table mt-5">
         <thead>
           <tr>
             <th>Description</th>

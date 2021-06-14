@@ -12,7 +12,7 @@ const InputTodo = () => {
       //remember this heroku app is just our server serving the build static content and also holding the restful api
 
       //https://pern-todo-app-demo.herokuapp.com/todos
-      const response = await fetch("/todos", {
+      await fetch("/todos", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
